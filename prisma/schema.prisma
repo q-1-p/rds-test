@@ -9,8 +9,8 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:./migrations/test.db"
+ provider = "postgresql"
+ url      = "postgresql://postgres:password>@learn-cfn-db-qy6uxu7b6gpz.cbws0w42acye.ap-northeast-1.rds.amazonaws.com:5432/postgres"
 }
 
 model records {
