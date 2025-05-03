@@ -54,7 +54,7 @@ jobs:
 
       - name: SSH接続して、git pullとgit buildする
         run: |
-          ssh -oStrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} -i private_key "cd /home/ec2-user/ec2-deploy-test && git fetch --prune && git checkout main && git pull origin main && npm install && npm run build"
+          ssh -oStrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} -i private_key "cd /home/ec2-user/rds-test && git fetch --prune && git checkout main && git pull origin main && npm install && npm run build"
 
       - name: SSHのセキュリティグループを閉じる
         run: |
